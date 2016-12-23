@@ -1,0 +1,95 @@
+:root {
+	--light-peach: #facac0;
+	--black: #000000;
+	--blue-green: #167c80;
+	--light-grey: #c7c6c4;
+	--pale-lilac-49: rgba(255, 255, 255, 1);
+	--peacock-blue: #005397;
+}
+
+@font-face {
+	font-family: 'Roboto Mono', monospace;
+	src: url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700");
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden
+}
+body, html {
+  max-width: 100%;
+	max-height: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+	color: var(--black);
+  background: #fff;
+}
+p {
+  font-size: 1em;
+  line-height: 2em;
+  max-width: 100%
+}
+a {
+  text-decoration: none
+}
+
+a:visited {
+	color: var(--black);
+}
+
+.title {
+  margin: 72px 0 24px;
+  font-size: 1.4em;
+  font-weight: 300;
+  text-transform: capitalize
+}
+.code, pre {
+  font-family: m;
+  font-size: .9em;
+  display: inline;
+  color: #36383a
+}
+pre {
+  line-height: 1.8em;
+  white-space: pre-wrap
+}
+
+.outer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+	height: 100vh;
+}
+.container-title {
+	display: flex;
+	justify-content: center;
+}
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 880px;
+  width: 100vw;
+}
+
+.sections {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  margin-top: 100px;
+	font-size: 16px;
+	font-weight: normal;
+	color: var(--black);
+}
+
+.bottom-container {
+	align-self: flex-end;
+}

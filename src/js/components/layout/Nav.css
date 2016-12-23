@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pale-lilac-49);
+  /*border-bottom: 1px solid rgb(36, 37, 37);*/
+  box-shadow: 0 2px 3px 0 var(--blue-green);
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.inner-nav {
+  display: flex;
+  justify-content: space-between;;
+  width: 880px;
+  max-width: 880px;
+  color: var(--black);
+}
+
+.nav-title {
+  display: flex;
+}
+
+.nav-link {
+  display: flex;
+}
