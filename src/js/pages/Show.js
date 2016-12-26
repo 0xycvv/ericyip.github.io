@@ -1,22 +1,25 @@
 // @flow
 import React from 'react'
-import Project from '../components/Project'
+import Projects from '../components/Projects'
 
 export default class Show extends React.Component{
   render() {
-    const Projects = [
-      "D3 Bar",
-      "Three.js",
-      "P5.js",
+    const { params } = this.props;
+    console.log(this.props)
+
+    const ProjectList = [
+      "D3Bar",
+      "Threejs",
+      "P5js",
       "Animation",
       "Prototype"
-    ].map((title, i) => <Project key={i} title={title}/> );
+    ].map((title, i) => <Projects key={i} title={title}/> );
     return (
       <div className="sections">
         <div className="container-title">
           <h1>Show Room</h1>
         </div>
-        <div className="section">{Projects}</div>
+        <div className="section">{ProjectList}</div>
       </div>
     )
   }

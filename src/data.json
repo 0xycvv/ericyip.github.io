@@ -1,0 +1,58 @@
+{
+  "Portfolio": {
+    "title": "Portfolio",
+    "img": "img",
+    "desc": "desc",
+    "type": [
+      "Web",
+      "Design",
+      "Development"
+    ],
+    "tech": [
+      "REACT",
+      "JS"
+    ]
+  },
+  "D3": {
+    "title": "D3",
+    "img": "img",
+    "desc": "desc",
+    "type": [
+      "Web",
+      "Design",
+      "Development"
+    ],
+    "tech": [
+      "D3",
+      "JS"
+    ]
+  },
+  "P5": {
+    "title": "P5",
+    "img": "img",
+    "desc": "desc",
+    "type": [
+      "Web",
+      "Design",
+      "Development"
+    ],
+    "tech": [
+      "P5",
+      "JS"
+    ]
+  },
+  "Prototype": {
+    "title": "Prototype",
+    "img": "img",
+    "desc": "desc",
+    "type": [
+      "App",
+      "Design",
+      "Prototype"
+    ],
+    "tech": [
+      "Framer",
+      "Sketch"
+    ]
+  }
+}
