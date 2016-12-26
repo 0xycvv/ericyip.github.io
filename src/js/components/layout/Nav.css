@@ -15,6 +15,10 @@
   font-weight: 200;
 }
 
+.nav a {
+	color: var(--black);
+}
+
 .inner-nav {
   display: flex;
   justify-content: space-between;;

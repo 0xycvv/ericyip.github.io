@@ -10,11 +10,11 @@
 	display: inline;
 }
 
-.about-link a {
+.about-link {
   color: var(--peacock-blue);
-  transition: all 0.5s ease;
+  transition: all .75s ease-out;
 }
 
-.about-link a:hover {
+.about-link:hover {
   color: var(--light-grey);
 }
