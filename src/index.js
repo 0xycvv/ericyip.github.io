@@ -9,7 +9,7 @@ import App from './js/pages/App';
 import Show from './js/pages/Show';
 import About from './js/pages/About';
 import Project from './js/components/Project';
-import config from './config';
+import myData from './data.json'
 
 const app = document.getElementById('root');
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
@@ -18,14 +18,12 @@ const NotFound = () => (
 )
 
 const projectIsExist = function(transition, replace) {
-  const ProjectList = [
-    "D3Bar",
-    "Threejs",
-    "P5js",
-    "Animation",
-    "Prototype"
-  ]
-  const hasIndex = ProjectList.indexOf(transition.params.title);
+  const ProjectList = []
+  Object.keys(myData).forEach(function(i){
+    ProjectList.push(myData[i].title.toLowerCase())
+  })
+  console.log(transition)
+  const hasIndex = ProjectList.indexOf(transition.params.title.toLowerCase());
   if (hasIndex === -1){
     replace('/*')
   }
@@ -33,8 +31,8 @@ const projectIsExist = function(transition, replace) {
 
 ReactDOM.render(
   <Router history={appHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute data={config.path.data} component={Show}></IndexRoute>
+    <Route path="/" data={myData} component={App}>
+      <IndexRoute component={Show}></IndexRoute>
         <Route path="/project/:title" component={Project} onEnter={projectIsExist}></Route>
       <Route path="/about" component={About}></Route>
       <Route path="*" component={NotFound}></Route>

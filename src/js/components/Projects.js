@@ -6,8 +6,7 @@ import './Project.css';
 export default class Projects extends React.Component {
   render() {
     const { title } = this.props;
-    const projectLink = "/project/" + title;
-    // console.log(this.props.params.title);
+    const projectLink = "/project/" + title.toLowerCase();
 
     return (
       <div className="project">
