@@ -6,21 +6,45 @@ export default class Show extends React.Component {
     super(props);
     const {data} = this.props;
     const projectTitle = [];
+    const projectDesc = [];
+    const projectType = [];
+    const projectImg = [];
 
-    Object.keys(data).forEach(function(key) {
-      projectTitle.push(data[key].title)
+
+    Object.keys(data).forEach(function(i) {
+      projectDesc.push(data[i].desc)
     });
-    this.state = {project: projectTitle};
+
+    Object.keys(data).forEach(function(i) {
+      projectType.push(data[i].type)
+    });
+
+    Object.keys(data).forEach(function(i) {
+      projectImg.push(data[i].img)
+    });
+
+    Object.keys(data).forEach(function(i) {
+      projectTitle.push(data[i].title)
+    });
+
+    const project = [];
+    Object.keys(data).forEach(function(i){
+      project.push(data[i])
+    })
+
+    this.state = {project: project};
   }
   render() {
     // const {params} = this.props;
-    const projectList = this.state.project.map((title, i) => <Projects key={i} title={title}/>);
-    console.log(projectList)
+    console.log(this.state.project)
+    const projectList = this.state.project.map((data, i) =>
+    <Projects key={i} data={data} />);
+
     // projectTitle.map((title, i) => <Projects key={i} title={title}/>);
     return (
       <div className="sections">
         <div className="container-title">
-          <h1>Show Room</h1>
+          <h1>My Playground</h1>
         </div>
         <div className="section">{projectList}</div>
       </div>
