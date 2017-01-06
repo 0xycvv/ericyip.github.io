@@ -1,7 +1,9 @@
 //@flow
 import React from 'react';
 import { Link } from 'react-router';
-import './Project.css';
+import './Projects.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 export default class Projects extends React.Component {
   render() {
@@ -9,13 +11,27 @@ export default class Projects extends React.Component {
     const { desc } = this.props.data;
     const { img } = this.props.data;
     const projectLink = "/project/" + title.toLowerCase();
-    console.log(this.props.data)
+
     return (
-      <div className="project">
-        <h4 className="title">{title}</h4>
-        <Link to={projectLink} >More</Link>
-        <p>{desc}</p>
+      <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}
+        ><div className="project-list">
+         <Link to={projectLink}><div className="img-wrapper">
+              <img src={img}/>
+          <div className="overlay-card">
+            <div className="overlay-title">
+              {title}
+              {/* <h3 className="overlay-title-text">{title}</h3> */}
+            </div>
+          </div>
+        </div></Link>
+        {/* <p>{desc}</p> */}
       </div>
+    </ReactCSSTransitionGroup>
     )
   }
 }

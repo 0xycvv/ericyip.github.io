@@ -1,0 +1,81 @@
+.project-list {
+  max-width: 880px;
+  max-height: 600px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  opacity: 1;
+  transition: .4s ease-out;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.img-wrapper .overlay-card {
+  position: absolute;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(70, 70, 70, 0.1);
+  opacity: 0;
+  transition: .4s ease-out;
+}
+
+.overlay-card:hover {
+  opacity: 1;
+}
+
+.overlay-card, .overlay-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.overlay-title {
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: var(--blue-green);
+  color: var(--pale-lilac-49);
+  transition: opacity .4s ease-out;
+  opacity: 0;
+}
+
+.overlay-title-text {
+  text-align: center;
+}
+
+.overlay-card:hover .overlay-title {
+  opacity: 1;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-out;
+}

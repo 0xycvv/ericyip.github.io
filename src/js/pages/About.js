@@ -1,11 +1,18 @@
 // @flow
 import React from 'react';
 import './About.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class About extends React.Component {
   render() {
     const heart = <span className="hearts">&hearts;</span>
     return (
+      <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}>
       <div className="about">
         <p>Hi, I'm Eric a Hong Kong <s>dreamer</s> currently living in Taipei City.</p>
         <br/>
@@ -26,6 +33,7 @@ export default class About extends React.Component {
           ericv0430@gmail.com
         </a>
       </div>
+    </ReactCSSTransitionGroup>
     );
   }
 }

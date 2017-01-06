@@ -1,7 +1,7 @@
 {
   "Portfolio": {
     "title": "Portfolio",
-    "img": "01.jpg",
+    "img": "src/img/01.jpg",
     "desc": "desc",
     "type": [
       "Web",
@@ -15,7 +15,7 @@
   },
   "D3": {
     "title": "D3",
-    "img": "img",
+    "img": "02.jpg",
     "desc": "desc",
     "type": [
       "Web",

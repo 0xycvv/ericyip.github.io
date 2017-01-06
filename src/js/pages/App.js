@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
-import './App.css'
-
+import './App.css';
 import Footer from '../components/layout/Footer';
 import Nav from '../components/layout/Nav';
 
