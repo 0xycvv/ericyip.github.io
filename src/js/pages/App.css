@@ -12,6 +12,11 @@
 	src: url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700");
 }
 
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+}
+
 * {
   box-sizing: border-box;
   -webkit-backface-visibility: hidden
@@ -98,8 +103,4 @@ figure {
 	font-size: 16px;
 	font-weight: normal;
 	color: var(--black);
-}
-
-.bottom-container {
-	align-self: flex-end;
 }

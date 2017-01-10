@@ -13,32 +13,32 @@
       "JS"
     ]
   },
-  "D3": {
-    "title": "D3",
+  "Med": {
+    "title": "Med",
     "img": "02.jpg",
     "desc": "desc",
     "type": [
-      "Web",
+      "App",
       "Design",
-      "Development"
+      "Prototype"
     ],
     "tech": [
-      "D3",
-      "JS"
+      "FRAMERJS",
+      "SKETCH"
     ]
   },
-  "P5": {
-    "title": "P5",
+  "ObjectLoader": {
+    "title": "ObjLoader",
     "img": "img",
     "desc": "desc",
     "type": [
       "Web",
-      "Design",
+      "WebGL",
       "Development"
     ],
     "tech": [
-      "P5",
-      "JS"
+      "Three",
+      "Js"
     ]
   },
   "Prototype": {

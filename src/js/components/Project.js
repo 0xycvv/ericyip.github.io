@@ -65,12 +65,12 @@ export default class Project extends React.Component {
             <div className="container-title">
               <div className="title">{title}</div>
             </div>
-            <Link to="/">Back</Link>
             <img src={img} alt=""/>
             <p>{desc}</p>
             <p>{techList}</p>
             <p>{typeList}</p>
           </div>
+          <Link to="/">Back</Link>
     </ReactCSSTransitionGroup>
     )
   }
